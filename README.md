@@ -16,34 +16,35 @@ The goal is to show how an optimization-based AI method can be used to solve a c
 
 The Colebrook equation is:
 
-\[
+$$
 \frac{1}{\sqrt{f}} = -2 \log_{10}\left(\frac{\varepsilon / D}{3.7} + \frac{2.51}{Re \sqrt{f}}\right)
-\]
+$$
 
 Where:
 
-- \(f\) = Darcy friction factor
-- \(Re\) = Reynolds number
-- \(\varepsilon / D\) = relative roughness of the pipe
+- `f` = Darcy friction factor
+- `Re` = Reynolds number
+- `ε / D` = relative roughness of the pipe
 
-Since the equation is **implicit in \(f\)**, it cannot be solved directly and requires iterative or optimization-based techniques.
+Since the equation is **implicit in `f`**, it cannot be solved directly and requires iterative or optimization-based techniques.
 
 ---
 
 ## Objective
-The objective of this project is to find the friction factor \(f\) such that the Colebrook residual becomes as close to zero as possible.
+
+The objective of this project is to find the friction factor `f` such that the Colebrook residual becomes as close to zero as possible.
 
 The residual function used is:
 
-\[
+$$
 R(f) = \frac{1}{\sqrt{f}} + 2\log_{10}\left(\frac{\varepsilon/D}{3.7} + \frac{2.51}{Re\sqrt{f}}\right)
-\]
+$$
 
 The solver tries to minimize:
 
-\[
+$$
 |R(f)|
-\]
+$$
 
 ---
 
@@ -73,7 +74,6 @@ The Newton-Raphson method is used as a benchmark numerical method. It iterativel
   - GA friction factor
   - NR friction factor
   - GA residual error
-  - absolute difference between GA and NR
 - Demonstrates an AI-based optimization approach for a chemical engineering problem
 
 ---
@@ -81,6 +81,5 @@ The Newton-Raphson method is used as a benchmark numerical method. It iterativel
 ## File Structure
 
 ```text
-.
-├── colebrook_solver.py
+├── AIFA Project Code.py
 └── README.md
