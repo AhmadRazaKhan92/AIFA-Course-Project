@@ -2,6 +2,8 @@ import random
 import math
 import csv
 
+random.seed(42)
+
 def colebrook_residual(f, Re, rel_rough):
     if f <= 0:
         return 1e9
